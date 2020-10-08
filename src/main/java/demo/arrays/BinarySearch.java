@@ -13,6 +13,10 @@ public class BinarySearch {
     /**
      * Assuming we have an ordered int [] return the array index for the given key otherwise return -1.
      *
+     *
+     * Time Complexity: O(log n) logarithmic
+     * Space Complexity: O(1) constant
+     *
      * @param values the array to search
      * @param key the key value in the array we are searching for
      * @return the index in the array that corresponds to the key
