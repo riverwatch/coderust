@@ -4,8 +4,8 @@ public class BinarySearch {
 
     public static void main(String[] args){
         BinarySearch binarySearch = new BinarySearch();
-        int[] values = {10, 20, 30, 40, 50, 60, 70, 80};
-        int existsAt = binarySearch.findByKey(values, 30);
+        int[] values = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+        int existsAt = binarySearch.findByKey(values, 50);
 
         System.out.println("exists at "+ existsAt);
     }
@@ -29,14 +29,13 @@ public class BinarySearch {
 
         while( low <= high){
 
-            int middleIndex = (high - low) / 2;
-            int current = values[middleIndex];
+            int middleIndex = low + (high - low) / 2;
 
-            if(current == key){
+            if(values[middleIndex] == key){
                 return middleIndex;
-            } else if(current < middleIndex){
+            } else if(key <= values[middleIndex]){
                 high = middleIndex - 1;
-            } else {
+            } else if(key >= values[middleIndex]){
                 low = middleIndex + 1;
             }
         }
